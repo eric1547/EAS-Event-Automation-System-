@@ -1,0 +1,14 @@
+C:\Users\oinventor\Documents\Proects\EventAutomationSystem\obj\Debug\net10.0\EventAutomationSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oinventor\Documents\Proects\EventAutomationSystem\obj\Debug\net10.0\EventAutomationSystem.AssemblyInfoInputs.cache
+C:\Users\oinventor\Documents\Proects\EventAutomationSystem\obj\Debug\net10.0\EventAutomationSystem.AssemblyInfo.cs
+C:\Users\oinventor\Documents\Proects\EventAutomationSystem\obj\Debug\net10.0\EventAutomationSystem.csproj.CoreCompileInputs.cache
+C:\Users\oinventor\Documents\Proects\EventAutomationSystem\bin\Debug\net10.0\EventAutomationSystem.exe
+C:\Users\oinventor\Documents\Proects\EventAutomationSystem\bin\Debug\net10.0\EventAutomationSystem.deps.json
+C:\Users\oinventor\Documents\Proects\EventAutomationSystem\bin\Debug\net10.0\EventAutomationSystem.runtimeconfig.json
+C:\Users\oinventor\Documents\Proects\EventAutomationSystem\bin\Debug\net10.0\EventAutomationSystem.dll
+C:\Users\oinventor\Documents\Proects\EventAutomationSystem\bin\Debug\net10.0\EventAutomationSystem.pdb
+C:\Users\oinventor\Documents\Proects\EventAutomationSystem\obj\Debug\net10.0\EventAutomationSystem.dll
+C:\Users\oinventor\Documents\Proects\EventAutomationSystem\obj\Debug\net10.0\refint\EventAutomationSystem.dll
+C:\Users\oinventor\Documents\Proects\EventAutomationSystem\obj\Debug\net10.0\EventAutomationSystem.pdb
+C:\Users\oinventor\Documents\Proects\EventAutomationSystem\obj\Debug\net10.0\EventAutomationSystem.genruntimeconfig.cache
+C:\Users\oinventor\Documents\Proects\EventAutomationSystem\obj\Debug\net10.0\ref\EventAutomationSystem.dll
