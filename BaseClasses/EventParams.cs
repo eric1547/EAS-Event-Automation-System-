@@ -1,12 +1,12 @@
 using System;
 
-public abstract class Event
+public abstract class EventParams
 {
     public string Origin { get; }
     public string Content { get; }
     public DateTime RecivedIn { get; }
-
-    protected Event(string origin, string content)
+    // This is the constructor (it sets the values to the variables)
+    protected EventParams(string origin, string content)
     {
         Origin = origin;
         Content = content;

@@ -12,3 +12,4 @@ C:\Users\oinventor\Documents\Proects\EventAutomationSystem\obj\Debug\net10.0\ref
 C:\Users\oinventor\Documents\Proects\EventAutomationSystem\obj\Debug\net10.0\EventAutomationSystem.pdb
 C:\Users\oinventor\Documents\Proects\EventAutomationSystem\obj\Debug\net10.0\EventAutomationSystem.genruntimeconfig.cache
 C:\Users\oinventor\Documents\Proects\EventAutomationSystem\obj\Debug\net10.0\ref\EventAutomationSystem.dll
+C:\Users\oinventor\Documents\Proects\EventAutomationSystem\obj\Debug\net10.0\EventAutomationSystem.sourcelink.json
