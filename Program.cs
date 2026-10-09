@@ -9,11 +9,8 @@ public class Program
         // Normaly we would sub a function direcly. But, because we need to PASS the result
         // to the event listener, we need to envolve the result func on a eventHandler var
         // (making it a event, that is also a result functions)
-        EventHandler<EventParams> eventResult = (sender, email) => // As we cans see, pure c# has arrow funcs
-        {
-            Console.WriteLine($"Testing {email.Origin}");
-        };
-        listener.EventSub(eventResult);
+        listener.EventSub(ExampleEvent.exampleEvent);
         listener.EventTrigger(email);
+        listener.EventUnsub(ExampleEvent.exampleEvent);
     }
 }
