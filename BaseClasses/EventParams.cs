@@ -1,5 +1,3 @@
-using System;
-
 public abstract class EventParams
 {
     public string Origin { get; }

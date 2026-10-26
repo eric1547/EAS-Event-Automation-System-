@@ -1,5 +1,3 @@
-using System;
-
 public class Email : EventParams
 {
     public string Sender { get; }
