@@ -1,5 +1,3 @@
-using System;
-
 public class ExampleEvent
 {
         // Normaly we would sub a function direcly. But, because we need to PASS the result

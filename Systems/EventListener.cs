@@ -3,6 +3,13 @@ public delegate Task AsyncEventHandler<TEventArgs>(object? sender, TEventArgs ev
 
 public class EventListener
 {
+    // The static property creates one shared listener when the type is first used.
+    // The private constructor prevents other classes from creating separate listeners.
+    // Code that needs the listener accesses this same object through EventListener.Instance.
+    public static EventListener Instance { get; } = new();
+
+    private EventListener() { }
+
     // Creates the event
     private AsyncEventHandler<EventParams>? _onEventTrigger;
     // This method subs a "result" to the event

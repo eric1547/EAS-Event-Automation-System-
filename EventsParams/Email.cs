@@ -10,4 +10,8 @@ public class Email : EventParams
         Sender = sender;
         Subject = subject;
     }
+
+    // Email is the concrete event type, so it passes itself to VisitAsync(Email).
+    // This lets the visitor use Email-specific data such as Sender and Subject.
+    public override Task AcceptAsync(IEventVisitor visitor) => visitor.VisitAsync(this);
 }

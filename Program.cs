@@ -5,7 +5,9 @@ using MimeKit;
 
 public class Program
 {
-        static EventListener listener = new();
+    // Use the shared instance so subscriptions and event triggers operate on the same listener.
+    // This is the Singleton access point; creating a separate listener here would have separate subscriptions.
+    static EventListener listener = EventListener.Instance;
     public static async Task Main()
     {
         SaslMechanismOAuth2 oauth2 = await MailConection.Auth();
