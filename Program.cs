@@ -1,6 +1,7 @@
 ﻿using MailKit;
 using MailKit.Net.Imap;
 using MailKit.Security;
+using MimeKit;
 
 public class Program
 {
@@ -15,22 +16,30 @@ public class Program
         await client.ConnectAsync("imap.gmail.com", 993, SecureSocketOptions.SslOnConnect);
         await client.AuthenticateAsync(oauth2);
         // Code goes here
+
+        // This one needs so it can be cleared afterwards
         var inbox = client.Inbox;
         await inbox.OpenAsync(FolderAccess.ReadOnly);
-        var firstMasage = await inbox.GetMessageAsync(inbox.Count - 1);
-        Console.WriteLine(firstMasage.Subject);
-        Console.WriteLine(firstMasage.From);
-        //Console.WriteLine(firstMasage.TextBody);
-        await GeminiConection.ResumeMaking(firstMasage.TextBody);
+        int InboxCount = client.Inbox.Count;
 
+        listener.EventSub(OnEmailRecived.onEmailRecived);
+        while (true)
+        {
+            if (InboxCount != inbox.Count)
+            {
+                MimeMessage newInboxEmail = inbox.GetMessage(inbox.Count - 1);
+                Email newEmail = new(newInboxEmail.From.ToString(), newInboxEmail.Subject, newInboxEmail.TextBody);
+                Console.WriteLine("egggggggggggg");
+                Console.WriteLine(newEmail.Subject);
+                await listener.EventTrigger(newEmail);
+                break;
+            }
+            // I dont like this, but for some reason its the only thing that works for constanly check the email inbox
+            inbox = null;
+            inbox = client.Inbox;
+            await inbox.OpenAsync(FolderAccess.ReadOnly);
+        }
+        listener.EventUnsub(OnEmailRecived.onEmailRecived);
         await client.DisconnectAsync(true);
-
-        /*
-        Email email = new("diretoria@empresa.com", "Reunião", "Corpo do e-mail..."); 
-        listener.EventSub(ExampleEvent.exampleEvent);
-        listener.EventTrigger(email);
-        listener.EventUnsub(ExampleEvent.exampleEvent);
-        await MailConection.Auth();
-        */
     }
 }

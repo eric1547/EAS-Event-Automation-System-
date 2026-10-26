@@ -1,23 +1,24 @@
-using System;
+// Chnaged from event to elegate. This way the events can be awaited
+public delegate Task AsyncEventHandler<TEventArgs>(object? sender, TEventArgs eventArgs);
 
 public class EventListener
 {
     // Creates the event
-    private EventHandler<EventParams>? _onEventTrigger;
+    private AsyncEventHandler<EventParams>? _onEventTrigger;
     // This method subs a "result" to the event
-    public void EventSub(EventHandler<EventParams> eventResult)
+    public void EventSub(AsyncEventHandler<EventParams> eventResult)
     {
         _onEventTrigger += eventResult;
     }
     // Method for unsubing
-    public void EventUnsub(EventHandler<EventParams> eventResult)
+    public void EventUnsub(AsyncEventHandler<EventParams> eventResult)
     {
         _onEventTrigger -= eventResult;
     }
     // Method for triggering the event. This will trigger all the results subbed to the event
-    public void EventTrigger(EventParams eventParams){
+    public async Task EventTrigger(EventParams eventParams){
         // It recives an event params that will be sent to the event result to be processed
         // by the event result.
-        _onEventTrigger?.Invoke(this, eventParams);
+        await _onEventTrigger(this, eventParams);
     }
 }

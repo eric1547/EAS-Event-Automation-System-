@@ -1,16 +1,17 @@
+// I hate this, but is the solution that I know to desireliaze jsons
 public class GeminiResponse
 {
-    public List<Candidate> Candidates {get; set;}
+    required public Candidate[] Candidates {get; set;}
     public class Candidate
     {
-        public Content Content {get; set;}
+        required public Content Content {get; set;}
     }
             public class Content
         {
-            public List<Part> Parts {get; set;}
+            required public Part[] Parts {get; set;}
             public class Part
             {
-                public string Text {get; set;}
+                required public string Text {get; set;}
             }
         }
 }
