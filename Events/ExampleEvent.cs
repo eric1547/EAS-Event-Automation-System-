@@ -1,3 +1,5 @@
+using System;
+
 public class ExampleEvent
 {
         // Normaly we would sub a function direcly. But, because we need to PASS the result
@@ -5,8 +7,7 @@ public class ExampleEvent
         // (making it a event, that is also a result functions)
 
     // This is where the process will occor, and a "result" will be sent
-    public static AsyncEventHandler<EventParams> exampleEvent = (sender, email) => {
+    public static EventHandler<EventParams> exampleEvent = (sender, email) => {
         Console.WriteLine($"Testando um evento dora do script Program {email.Origin}");
-        return Task.CompletedTask;
     };
 }
