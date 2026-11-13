@@ -1,6 +1,6 @@
-// The Visitor interface declares an operation for each concrete event type it can process.
-// EventParams.AcceptAsync dispatches to the matching method; adding another event type
-// would require a corresponding Visit method here and an AcceptAsync override on that type.
+// Just declaring a basic interface that can be used as parent latter.
+// Just a rundown of what a interface is. In short, think of a class that is stripped of all its
+// privileges aside from being a parent and being capable of having their insides changed
 public interface IEventVisitor
 {
     Task VisitAsync(Email email);

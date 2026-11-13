@@ -1,8 +1,5 @@
 using System.Net.Http.Json;
 
-// Bridge implementation: this class performs the provider-specific Gemini HTTP request.
-// EmailSummarizer calls it through ISummaryProvider, so Gemini request details stay here
-// rather than being coupled to the event, visitor, or email model.
 public class GeminiSummaryProvider : ISummaryProvider
 {
     private const string ApiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=";

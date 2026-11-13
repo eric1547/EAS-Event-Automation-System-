@@ -36,7 +36,6 @@ public class MailConection
             LoginHint = GMailAccount
         });
 
-        // Note: For a web app, you'll want to use AuthorizationCodeWebApp instead.
         // This is a local server that will recive the gig to run. This makes so you dont need to set upp a server
         // to do the conection and auth
         LocalServerCodeReceiver codeReceiver = new();

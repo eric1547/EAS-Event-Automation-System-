@@ -1,4 +1,4 @@
-// Chnaged from event to elegate. This way the events can be awaited
+// Chnaged from event to delegate. This way the events can be awaited
 public delegate Task AsyncEventHandler<TEventArgs>(object? sender, TEventArgs eventArgs);
 
 public class EventListener
